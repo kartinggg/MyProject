@@ -1,0 +1,4 @@
+
+User-agent: *
+Allow: /
+Sitemap: https://unique-paprenjak-2dd62b.netlify.app/sitemap.xml

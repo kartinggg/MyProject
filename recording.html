@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Запис на прийом — Ветеринарна клініка Друзі тварин</title>
+
+<meta name="description" content="Запишіть свого домашнього улюбленця на прийом до ветеринарної клініки Друзі тварин у Конотопі. Зручний запис на консультацію та огляд.">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const animal = document.getElementById("animal");
+    const details = document.getElementById("animal-details");
+
+    animal.addEventListener("change", function () {
+        details.hidden = animal.value === "";
+    });
+
+    document.getElementById("appointment-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Дані заповнено! Це демонстраційна форма.");
+        });
+});
+</script>
+
+<body>
+
+<header class="form-header">
+    <a href="index.html">
+        <img src="image/logo.png" alt="Логотип" class="form-logo">
+    </a>
+    <h1>Оформлення запису</h1>
+</header>
+
+<main class="form-container order-form">
+    <form id="appointment-form">
+
+        <label for="fullname">Ім'я та прізвище</label>
+        <input type="text" id="fullname" name="fullname"
+               placeholder="Введіть ім'я та прізвище" required>
+
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone"
+               placeholder="+380XXXXXXXXX" required>
+
+        <label for="animal">Тварина</label>
+        <select id="animal" name="animal" required>
+            <option value="">Оберіть тварину</option>
+            <option value="cat">Кіт</option>
+            <option value="dog">Собака</option>
+            <option value="other">Інше</option>
+        </select>
+
+<div id="animal-details" hidden>
+    <label for="animal-name">Кличка тварини</label>
+    <input type="text" id="animal-name" name="animal-name"
+           placeholder="Введіть кличку">
+
+    <label for="animal-age">Вік тварини</label>
+    <input type="text" id="animal-age" name="animal-age"
+           placeholder="Введіть вік">
+</div>
+
+<div id="animal-details" hidden>
+    <label for="animal-name">Кличка тварини</label>
+    <input type="text" id="animal-name" placeholder="Введіть кличку">
+
+    <label for="animal-age">Вік тварини</label>
+    <input type="text" id="animal-age" placeholder="Введіть вік">
+</div>
+
+        <label for="service">Послуга</label>
+        <select id="service" name="service" required>
+            <option value="">Оберіть послугу</option>
+            <option value="consultation">Консультація</option>
+            <option value="vaccination">Вакцинація</option>
+            <option value="examination">Огляд</option>
+            <option value="other">Інше</option>
+        </select>
+
+        <button type="submit" class="form-button">
+            Записатись
+        </button>
+
+    </form>
+</main>
+<script src="script/script.js"></script>
+</body>
+</html>

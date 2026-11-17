@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Про нас — Ветеринарна клініка Друзі тварин</title>
+
+
+<meta name="description" content="Дізнайтеся більше про ветеринарну клініку Друзі тварин, наших спеціалістів та турботу про домашніх улюбленців.">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<section class="contact-form-section">
+    <h2>Зв'яжіться з нами</h2>
+
+    <form class="contact-form" id="contact-form">
+        <label for="contact-name">Ваше ім'я</label>
+        <input type="text" id="contact-name"
+               placeholder="Введіть ім'я" required>
+
+        <label for="contact-email">Електронна пошта</label>
+        <input type="email" id="contact-email"
+               placeholder="Введіть email" required>
+
+        <label for="contact-message">Повідомлення</label>
+        <textarea id="contact-message"
+                  placeholder="Ваше повідомлення"
+                  rows="5" required></textarea>
+
+        <button type="submit">Надіслати</button>
+    </form>
+</section>
+
+<script>
+document.getElementById("contact-form")
+    .addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Форма заповнена! Це демонстраційна версія.");
+    });
+</script>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="image/logo.png" alt="Логотип">
+        </a>
+    </div>
+
+    <nav class="navigation">
+        <a href="index.html">Особистий кабінет</a>
+        <a href="about.html">Про нас</a>
+        <a href="blog.html">Блог</a>
+        <a href="services.html">Послуги та ціни</a>
+        <a href="contacts.html">Контакти</a>
+    </nav>
+
+    <div class="location">📍 Конотоп</div>
+</header>
+
+<main class="main">
+    <aside class="sidebar">
+        <a href="index.html">1</a>
+        <a href="about.html">2</a>
+        <a href="services.html">3</a>
+        <a href="contacts.html">4</a>
+        <a href="#footer">5</a>
+    </aside>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Здоров'я улюбленців — наш пріоритет</h1>
+
+            <a href="recording.html" class="btn">
+                Записатись
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="image/cat-dog.png" alt="Котик і собака">
+        </div>
+    </section>
+</main>
+
+<section class="schedule-section">
+    <h2>Розклад роботи ветеринарних лікарів</h2>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Лікар</th>
+                <th>Спеціалізація</th>
+                <th>Дні роботи</th>
+                <th>Години роботи</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Лікар">Іваненко Людмила</td>
+                <td data-label="Спеціалізація">Терапевт</td>
+                <td data-label="Дні роботи">Пн–Пт</td>
+                <td data-label="Години роботи">09:00–17:00</td>
+            </tr>
+            <tr>
+                <td data-label="Лікар">Жученко Андрій</td>
+                <td data-label="Спеціалізація">Хірург</td>
+                <td data-label="Дні роботи">Вт–Сб</td>
+                <td data-label="Години роботи">10:00–18:00</td>
+            </tr>
+            <tr>
+                <td data-label="Лікар">Коваленко Яна</td>
+                <td data-label="Спеціалізація">Дерматолог</td>
+                <td data-label="Дні роботи">Пн–Сб</td>
+                <td data-label="Години роботи">08:00–16:00</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</section>
+
+<footer id="footer"></footer>
+
+<div id="imageSlider">
+    
+
+<img src="image/slide1.png" alt="Тварини">
+<img src="image/slide2.png" alt="Котик і песик">
+<img src="image/slide3.png" alt="Ветеринар із тваринами">
+
+
+
+    <button id="prevBtn">Попереднє</button>
+    <button id="nextBtn">Наступне</button>
+</div>
+
+<script src="script/script.js"></script>
+</body>
+</html>
